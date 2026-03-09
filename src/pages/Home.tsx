@@ -91,17 +91,25 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-muted py-16 sm:py-24">
-        <div className="container px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            ¿Listo para equipar tu empresa?
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Contáctanos hoy y descubre cómo podemos ayudarte
-          </p>
-          <Button asChild size="lg" className="touch-target">
-            <NavLink to="/contacto">Solicitar Cotización</NavLink>
-          </Button>
+      <section className="relative bg-gradient-to-br from-muted via-background to-muted py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25" />
+        <div className="container relative px-4 text-center">
+          <div className="mx-auto max-w-2xl">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Solicite una Cotización Personalizada
+            </h2>
+            <p className="mb-10 text-lg text-muted-foreground/90 leading-relaxed">
+              Nuestro equipo comercial está listo para asesorarle en la selección de productos y soluciones específicas para su industria
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="touch-target text-base px-8">
+                <NavLink to="/contacto">Solicitar Cotización</NavLink>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="touch-target text-base px-8">
+                <NavLink to="/catalogo">Explorar Catálogo</NavLink>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
