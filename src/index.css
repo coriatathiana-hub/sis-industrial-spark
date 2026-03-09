@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom fonts */
+.font-title {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.05em;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
