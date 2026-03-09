@@ -64,12 +64,12 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-16 sm:py-24">
         <div className="container px-4">
-          <div className="mb-12 text-center">
+          <div className="mb-16 text-center max-w-3xl mx-auto">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              ¿Por qué Distribuidora SIS?
+              Su Aliado Estratégico en Suministros Industriales
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Somos tu socio confiable en suministros industriales
+            <p className="text-lg text-muted-foreground/80 leading-relaxed">
+              Más de una década equipando empresas con soluciones integrales de seguridad y suministros especializados
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
