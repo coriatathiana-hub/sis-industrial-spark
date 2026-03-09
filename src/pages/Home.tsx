@@ -7,24 +7,24 @@ import heroImage from "@/assets/hero-industrial.jpg";
 const Home = () => {
   const features = [
     {
-      icon: Shield,
-      title: "Protección Personal",
-      description: "Equipamiento completo para la seguridad de tu equipo",
+      icon: HardHat,
+      title: "Equipos de Protección Personal",
+      description: "Soluciones certificadas de seguridad industrial para proteger a tu equipo de trabajo",
     },
     {
-      icon: Package,
-      title: "Productos Industriales",
-      description: "Herramientas y suministros de la más alta calidad",
+      icon: Boxes,
+      title: "Suministros Industriales",
+      description: "Amplio catálogo de productos especializados para operaciones industriales y comerciales",
     },
     {
-      icon: Clock,
-      title: "Entrega Rápida",
-      description: "Logística eficiente para mantener tu operación activa",
+      icon: Truck,
+      title: "Logística Empresarial",
+      description: "Entrega programada y servicio de distribución confiable a nivel nacional",
     },
     {
-      icon: Award,
-      title: "Calidad Garantizada",
-      description: "Marcas líderes respaldadas por nuestra experiencia",
+      icon: ShieldCheck,
+      title: "Garantía Profesional",
+      description: "Respaldo técnico y productos de fabricantes reconocidos en la industria",
     },
   ];
 
