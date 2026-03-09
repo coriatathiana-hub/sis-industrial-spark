@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ThemeSelector } from "@/components/ThemeSelector";
+import logoImg from "@/assets/logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
           <img 
-            src="/src/assets/logo.png" 
+            src={logoImg} 
             alt="Distribuidora SIS" 
             className="h-10 w-auto"
           />
@@ -61,7 +62,7 @@ const Header = () => {
               <div className="flex items-center justify-between px-2 pb-4 border-b">
                 <div className="flex items-center gap-2">
                   <img 
-                    src="/src/assets/logo.png" 
+                    src={logoImg} 
                     alt="Distribuidora SIS" 
                     className="h-10 w-auto"
                   />
