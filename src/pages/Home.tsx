@@ -1,4 +1,4 @@
-import { Shield, Package, Clock, Award } from "lucide-react";
+import { HardHat, Boxes, Truck, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
@@ -7,24 +7,24 @@ import heroImage from "@/assets/hero-industrial.jpg";
 const Home = () => {
   const features = [
     {
-      icon: Shield,
-      title: "Protección Personal",
-      description: "Equipamiento completo para la seguridad de tu equipo",
+      icon: HardHat,
+      title: "Equipos de Protección Personal",
+      description: "Soluciones certificadas de seguridad industrial para proteger a tu equipo de trabajo",
     },
     {
-      icon: Package,
-      title: "Productos Industriales",
-      description: "Herramientas y suministros de la más alta calidad",
+      icon: Boxes,
+      title: "Suministros Industriales",
+      description: "Amplio catálogo de productos especializados para operaciones industriales y comerciales",
     },
     {
-      icon: Clock,
-      title: "Entrega Rápida",
-      description: "Logística eficiente para mantener tu operación activa",
+      icon: Truck,
+      title: "Logística Empresarial",
+      description: "Entrega programada y servicio de distribución confiable a nivel nacional",
     },
     {
-      icon: Award,
-      title: "Calidad Garantizada",
-      description: "Marcas líderes respaldadas por nuestra experiencia",
+      icon: ShieldCheck,
+      title: "Garantía Profesional",
+      description: "Respaldo técnico y productos de fabricantes reconocidos en la industria",
     },
   ];
 
@@ -64,25 +64,25 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-16 sm:py-24">
         <div className="container px-4">
-          <div className="mb-12 text-center">
+          <div className="mb-16 text-center max-w-3xl mx-auto">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              ¿Por qué Distribuidora SIS?
+              Su Aliado Estratégico en Suministros Industriales
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Somos tu socio confiable en suministros industriales
+            <p className="text-lg text-muted-foreground/80 leading-relaxed">
+              Más de una década equipando empresas con soluciones integrales de seguridad y suministros especializados
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
-              <Card key={index} className="border-2 transition-colors hover:border-accent">
-                <CardHeader>
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                    <feature.icon className="h-6 w-6 text-accent" />
+              <Card key={index} className="group relative border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:shadow-xl hover:-translate-y-1">
+                <CardHeader className="pb-4">
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 ring-1 ring-accent/20 transition-all duration-300 group-hover:ring-accent/40 group-hover:scale-110">
+                    <feature.icon className="h-8 w-8 text-accent" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg font-semibold leading-tight">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">{feature.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -91,17 +91,25 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-muted py-16 sm:py-24">
-        <div className="container px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            ¿Listo para equipar tu empresa?
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Contáctanos hoy y descubre cómo podemos ayudarte
-          </p>
-          <Button asChild size="lg" className="touch-target">
-            <NavLink to="/contacto">Solicitar Cotización</NavLink>
-          </Button>
+      <section className="relative bg-gradient-to-br from-muted via-background to-muted py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25" />
+        <div className="container relative px-4 text-center">
+          <div className="mx-auto max-w-2xl">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Solicite una Cotización Personalizada
+            </h2>
+            <p className="mb-10 text-lg text-muted-foreground/90 leading-relaxed">
+              Nuestro equipo comercial está listo para asesorarle en la selección de productos y soluciones específicas para su industria
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="touch-target text-base px-8">
+                <NavLink to="/contacto">Solicitar Cotización</NavLink>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="touch-target text-base px-8">
+                <NavLink to="/catalogo">Explorar Catálogo</NavLink>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
