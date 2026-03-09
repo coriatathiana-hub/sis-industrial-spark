@@ -66,7 +66,7 @@ const Home = () => {
         <div className="container px-4">
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Su Aliado Estratégico en Suministros Industriales
+              Soluciones integrales para la industria. Calidad, seguridad y servicio profesional
             </h2>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
               Más de una década equipando empresas con soluciones integrales de seguridad y suministros especializados
