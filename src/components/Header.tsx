@@ -3,6 +3,7 @@ import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { ThemeSelector } from "@/components/ThemeSelector";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
