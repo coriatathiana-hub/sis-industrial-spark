@@ -58,15 +58,18 @@ const Header = () => {
             </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <div className="flex flex-col gap-4 py-8">
-              <div className="flex items-center gap-2 px-2 pb-4 border-b">
-                <img 
-                  src="/src/assets/logo.png" 
-                  alt="Distribuidora SIS" 
-                  className="h-10 w-auto"
-                />
-                <span className="font-bold text-foreground">
-                  Distribuidora SIS
-                </span>
+              <div className="flex items-center justify-between px-2 pb-4 border-b">
+                <div className="flex items-center gap-2">
+                  <img 
+                    src="/src/assets/logo.png" 
+                    alt="Distribuidora SIS" 
+                    className="h-10 w-auto"
+                  />
+                  <span className="font-bold text-foreground">
+                    Distribuidora SIS
+                  </span>
+                </div>
+                <ThemeSelector />
               </div>
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => (
@@ -84,6 +87,7 @@ const Header = () => {
             </div>
           </SheetContent>
         </Sheet>
+        </div>
       </div>
     </header>
   );
