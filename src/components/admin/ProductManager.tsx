@@ -8,133 +8,17 @@ import { PRODUCTS, CATEGORIES } from "@/data/products";
 import { Package } from "lucide-react";
 
 const ProductManager = () => {
-  const [products, setProducts] = useLocalStorage<AdminProduct[]>("admin_products", []);
-  const [categories] = useLocalStorage<Category[]>("admin_categories", []);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isGalleryDialogOpen, setIsGalleryDialogOpen] = useState(false);
-  const [editingProduct, setEditingProduct] = useState<AdminProduct | null>(null);
-  const [galleryProduct, setGalleryProduct] = useState<AdminProduct | null>(null);
-  const [deleteProduct, setDeleteProduct] = useState<AdminProduct | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterCategory, setFilterCategory] = useState<string>("all");
-  
-  const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    category: "",
-    subcategory: "",
-  });
 
   const filteredProducts = useMemo(() => {
-    return products.filter(product => {
+    return PRODUCTS.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = filterCategory === "all" || product.category === filterCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [products, searchTerm, filterCategory]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name.trim()) {
-      toast({
-        title: "Error",
-        description: "El nombre del producto es obligatorio",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!formData.category) {
-      toast({
-        title: "Error",
-        description: "Debes seleccionar una categoría",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (editingProduct) {
-      setProducts(products.map(prod => 
-        prod.id === editingProduct.id 
-          ? { ...prod, ...formData, updatedAt: new Date().toISOString() }
-          : prod
-      ));
-      toast({
-        title: "Producto actualizado",
-        description: "El producto se ha actualizado correctamente",
-      });
-    } else {
-      const newProduct: AdminProduct = {
-        id: `prod_${Date.now()}`,
-        ...formData,
-        images: [],
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      setProducts([...products, newProduct]);
-      toast({
-        title: "Producto creado",
-        description: "El nuevo producto se ha creado correctamente",
-      });
-    }
-
-    handleCloseDialog();
-  };
-
-  const handleEdit = (product: AdminProduct) => {
-    setEditingProduct(product);
-    setFormData({
-      name: product.name,
-      description: product.description,
-      category: product.category,
-      subcategory: product.subcategory || "",
-    });
-    setIsDialogOpen(true);
-  };
-
-  const handleDelete = (product: AdminProduct) => {
-    setDeleteProduct(product);
-  };
-
-  const confirmDelete = () => {
-    if (deleteProduct) {
-      setProducts(products.filter(prod => prod.id !== deleteProduct.id));
-      toast({
-        title: "Producto eliminado",
-        description: "El producto se ha eliminado correctamente",
-      });
-      setDeleteProduct(null);
-    }
-  };
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-    setEditingProduct(null);
-    setFormData({ name: "", description: "", category: "", subcategory: "" });
-  };
-
-  const handleOpenDialog = () => {
-    setEditingProduct(null);
-    setFormData({ name: "", description: "", category: "", subcategory: "" });
-    setIsDialogOpen(true);
-  };
-
-  const handleManageGallery = (product: AdminProduct) => {
-    setGalleryProduct(product);
-    setIsGalleryDialogOpen(true);
-  };
-
-  const handleUpdateImages = (images: string[]) => {
-    if (galleryProduct) {
-      setProducts(products.map(prod => 
-        prod.id === galleryProduct.id 
-          ? { ...prod, images, updatedAt: new Date().toISOString() }
-          : prod
-      ));
-    }
-  };
+  }, [searchTerm, filterCategory]);
 
   return (
     <>
