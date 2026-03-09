@@ -14,10 +14,14 @@ const WhatsAppButton = () => {
     <Button
       onClick={handleWhatsAppClick}
       size="lg"
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-[#25D366] p-0 shadow-lg transition-transform hover:scale-110 hover:bg-[#20BA5A] md:h-16 md:w-16"
+      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full p-0 shadow-lg transition-transform hover:scale-110 md:h-16 md:w-16"
       aria-label="Contactar por WhatsApp"
     >
-      <MessageCircle className="h-7 w-7 text-white md:h-8 md:w-8" />
+      <img 
+        src={whatsappIcon} 
+        alt="WhatsApp" 
+        className="h-full w-full rounded-full object-cover"
+      />
     </Button>
   );
 };
