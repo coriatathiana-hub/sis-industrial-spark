@@ -31,18 +31,21 @@ const Header = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:items-center md:gap-6">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground touch-target flex items-center"
-              activeClassName="text-foreground"
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav className="hidden md:flex md:items-center md:gap-6">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground touch-target flex items-center"
+                activeClassName="text-foreground"
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+          <ThemeSelector />
+        </div>
 
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
