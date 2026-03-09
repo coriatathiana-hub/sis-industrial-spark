@@ -26,10 +26,10 @@ const Admin = () => {
       {/* Info Card */}
       <Card className="mb-6 border-primary/20 bg-primary/5">
         <CardHeader>
-          <CardTitle className="text-lg">Modo Local (Desarrollo)</CardTitle>
+          <CardTitle className="text-lg">Panel de Demostración</CardTitle>
           <CardDescription>
-            Los datos se almacenan localmente en tu navegador. Para producción, 
-            estos datos deberán migrarse a una base de datos.
+            Este panel muestra los productos y categorías actuales del catálogo público.
+            Los cambios aquí son solo demostrativos y no afectan el catálogo real.
           </CardDescription>
         </CardHeader>
       </Card>
