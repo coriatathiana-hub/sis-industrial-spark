@@ -5,85 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import { CATEGORIES, PRODUCTS } from "@/data/products";
 
 const CategoryManager = () => {
-  const [categories, setCategories] = useLocalStorage<Category[]>("admin_categories", []);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [editingCategory, setEditingCategory] = useState<Category | null>(null);
-  const [deleteCategory, setDeleteCategory] = useState<Category | null>(null);
-  const [formData, setFormData] = useState({ name: "", description: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name.trim()) {
-      toast({
-        title: "Error",
-        description: "El nombre de la categoría es obligatorio",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (editingCategory) {
-      // Update existing category
-      setCategories(categories.map(cat => 
-        cat.id === editingCategory.id 
-          ? { ...cat, ...formData, updatedAt: new Date().toISOString() }
-          : cat
-      ));
-      toast({
-        title: "Categoría actualizada",
-        description: "La categoría se ha actualizado correctamente",
-      });
-    } else {
-      // Create new category
-      const newCategory: Category = {
-        id: `cat_${Date.now()}`,
-        ...formData,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      setCategories([...categories, newCategory]);
-      toast({
-        title: "Categoría creada",
-        description: "La nueva categoría se ha creado correctamente",
-      });
-    }
-
-    handleCloseDialog();
-  };
-
-  const handleEdit = (category: Category) => {
-    setEditingCategory(category);
-    setFormData({ name: category.name, description: category.description });
-    setIsDialogOpen(true);
-  };
-
-  const handleDelete = (category: Category) => {
-    setDeleteCategory(category);
-  };
-
-  const confirmDelete = () => {
-    if (deleteCategory) {
-      setCategories(categories.filter(cat => cat.id !== deleteCategory.id));
-      toast({
-        title: "Categoría eliminada",
-        description: "La categoría se ha eliminado correctamente",
-      });
-      setDeleteCategory(null);
-    }
-  };
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-    setEditingCategory(null);
-    setFormData({ name: "", description: "" });
-  };
-
-  const handleOpenDialog = () => {
-    setEditingCategory(null);
-    setFormData({ name: "", description: "" });
-    setIsDialogOpen(true);
-  };
+  // Convert CATEGORIES object to array with product counts
+  const categories = useMemo(() => {
+    return Object.entries(CATEGORIES).map(([key, name]) => ({
+      id: key,
+      name: name,
+      description: `Categoría de ${name.toLowerCase()}`,
+      productCount: PRODUCTS.filter(p => p.category === key).length,
+    }));
+  }, []);
 
   return (
     <>
