@@ -65,7 +65,7 @@ const Header = () => {
                     alt="Distribuidora SIS" 
                     className="h-10 w-auto"
                   />
-                  <span className="font-bold text-foreground">
+                  <span className="font-title font-bold text-foreground tracking-wide">
                     Distribuidora SIS
                   </span>
                 </div>
