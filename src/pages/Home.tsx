@@ -2,6 +2,7 @@ import { Shield, Package, Clock, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
+import heroImage from "@/assets/hero-industrial.jpg";
 
 const Home = () => {
   const features = [
