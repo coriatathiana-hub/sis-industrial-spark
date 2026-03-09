@@ -30,21 +30,29 @@ const Home = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-navy via-steel to-primary py-20 sm:py-32">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="container relative px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+      <section className="relative overflow-hidden bg-primary min-h-[520px] sm:min-h-[600px]">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30" />
+
+        <div className="container relative z-10 flex items-center min-h-[520px] sm:min-h-[600px] px-4 py-16">
+          <div className="max-w-2xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-lg">
               Equipamos a tu empresa con los mejores productos industriales y de protección personal
             </h1>
-            <p className="mb-8 text-lg text-white/90 sm:text-xl">
+            <p className="mb-8 text-lg text-white/90 sm:text-xl drop-shadow-md">
               Soluciones integrales para la industria. Calidad, seguridad y servicio profesional.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 touch-target">
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 touch-target shadow-lg">
                 <NavLink to="/catalogo">Ver Catálogo</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 touch-target">
+              <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 touch-target backdrop-blur-sm">
                 <NavLink to="/contacto">Contactar</NavLink>
               </Button>
             </div>
