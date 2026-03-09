@@ -5,30 +5,41 @@ import { Package } from "lucide-react";
 
 interface ProductGalleryProps {
   productName: string;
+  imageUrl?: string;
   imageCount?: number;
 }
 
-const ProductGallery = ({ productName, imageCount = 4 }: ProductGalleryProps) => {
+const ProductGallery = ({ productName, imageUrl, imageCount = 1 }: ProductGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState(0);
   
-  // Generate placeholder images
-  const images = Array.from({ length: imageCount }, (_, i) => ({
-    id: i,
-    alt: `${productName} - Vista ${i + 1}`,
-  }));
+  // Use real image if available, otherwise show placeholder
+  const images = imageUrl
+    ? [{ id: 0, url: imageUrl, alt: productName }]
+    : Array.from({ length: imageCount }, (_, i) => ({
+        id: i,
+        alt: `${productName} - Vista ${i + 1}`,
+      }));
 
   return (
     <div className="space-y-4">
       {/* Main image */}
-      <AspectRatio ratio={4 / 3} className="bg-muted rounded-lg overflow-hidden">
-        <div className="flex h-full w-full items-center justify-center">
-          <div className="text-center">
-            <Package className="mx-auto h-24 w-24 text-muted-foreground" />
-            <p className="mt-4 text-sm text-muted-foreground">
-              Imagen no disponible
-            </p>
+      <AspectRatio ratio={4 / 3} className="bg-muted rounded-lg overflow-hidden border">
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={productName}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <div className="text-center">
+              <Package className="mx-auto h-24 w-24 text-muted-foreground" />
+              <p className="mt-4 text-sm text-muted-foreground">
+                Imagen no disponible
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </AspectRatio>
 
       {/* Thumbnail gallery */}
