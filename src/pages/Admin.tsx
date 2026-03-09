@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import CategoryManager from "@/components/admin/CategoryManager";
 import ProductManager from "@/components/admin/ProductManager";
+import { PRODUCTS, CATEGORIES } from "@/data/products";
 
 const Admin = () => {
   return (
@@ -25,10 +26,10 @@ const Admin = () => {
       {/* Info Card */}
       <Card className="mb-6 border-primary/20 bg-primary/5">
         <CardHeader>
-          <CardTitle className="text-lg">Modo Local (Desarrollo)</CardTitle>
+          <CardTitle className="text-lg">Panel de Demostración</CardTitle>
           <CardDescription>
-            Los datos se almacenan localmente en tu navegador. Para producción, 
-            estos datos deberán migrarse a una base de datos.
+            Este panel muestra los productos y categorías actuales del catálogo público.
+            Los cambios aquí son solo demostrativos y no afectan el catálogo real.
           </CardDescription>
         </CardHeader>
       </Card>
@@ -62,22 +63,19 @@ const Admin = () => {
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_products") || "[]").length}
+                {PRODUCTS.length}
               </div>
               <div className="text-sm text-muted-foreground">Productos</div>
             </div>
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_categories") || "[]").length}
+                {Object.keys(CATEGORIES).length}
               </div>
               <div className="text-sm text-muted-foreground">Categorías</div>
             </div>
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_products") || "[]").reduce(
-                  (sum: number, p: { images: string[] }) => sum + p.images.length, 
-                  0
-                )}
+                {PRODUCTS.filter(p => p.image).length}
               </div>
               <div className="text-sm text-muted-foreground">Imágenes Total</div>
             </div>
