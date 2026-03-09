@@ -44,10 +44,10 @@ const Home = () => {
         <div className="container relative z-10 flex items-center min-h-[520px] sm:min-h-[600px] px-4 py-16">
           <div className="max-w-2xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-lg">
-              Equipamos a tu empresa con los mejores productos industriales y de protección personal
+              Tu aliado en seguridad industrial
             </h1>
             <p className="mb-8 text-lg text-white/90 sm:text-xl drop-shadow-md">
-              Soluciones integrales para la industria. Calidad, seguridad y servicio profesional.
+              Equipamos a tu empresa con los mejores productos industriales y de protección personal
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 touch-target shadow-lg">
@@ -66,7 +66,7 @@ const Home = () => {
         <div className="container px-4">
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Su Aliado Estratégico en Suministros Industriales
+              Soluciones integrales para la industria. Calidad, seguridad y servicio profesional
             </h2>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
               Más de una década equipando empresas con soluciones integrales de seguridad y suministros especializados
