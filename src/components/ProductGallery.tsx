@@ -42,28 +42,38 @@ const ProductGallery = ({ productName, imageUrl, imageCount = 1 }: ProductGaller
         )}
       </AspectRatio>
 
-      {/* Thumbnail gallery */}
-      <div className="grid grid-cols-4 gap-2">
-        {images.map((image, index) => (
-          <button
-            key={image.id}
-            onClick={() => setSelectedImage(index)}
-            className={cn(
-              "touch-target relative rounded-md border-2 transition-colors overflow-hidden",
-              selectedImage === index
-                ? "border-primary"
-                : "border-transparent hover:border-muted-foreground/50"
-            )}
-            aria-label={image.alt}
-          >
-            <AspectRatio ratio={1} className="bg-muted">
-              <div className="flex h-full w-full items-center justify-center">
-                <Package className="h-8 w-8 text-muted-foreground" />
-              </div>
-            </AspectRatio>
-          </button>
-        ))}
-      </div>
+      {/* Thumbnail gallery - only show if multiple images */}
+      {images.length > 1 && (
+        <div className="grid grid-cols-4 gap-2">
+          {images.map((image, index) => (
+            <button
+              key={image.id}
+              onClick={() => setSelectedImage(index)}
+              className={cn(
+                "touch-target relative rounded-md border-2 transition-colors overflow-hidden",
+                selectedImage === index
+                  ? "border-primary"
+                  : "border-transparent hover:border-muted-foreground/50"
+              )}
+              aria-label={image.alt}
+            >
+              <AspectRatio ratio={1} className="bg-muted">
+                {'url' in image && image.url ? (
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center">
+                    <Package className="h-8 w-8 text-muted-foreground" />
+                  </div>
+                )}
+              </AspectRatio>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
