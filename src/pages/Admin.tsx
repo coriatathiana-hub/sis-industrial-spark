@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import CategoryManager from "@/components/admin/CategoryManager";
 import ProductManager from "@/components/admin/ProductManager";
+import { PRODUCTS, CATEGORIES } from "@/data/products";
 
 const Admin = () => {
   return (
