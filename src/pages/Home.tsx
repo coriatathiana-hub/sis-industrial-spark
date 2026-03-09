@@ -72,17 +72,17 @@ const Home = () => {
               Somos tu socio confiable en suministros industriales
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
-              <Card key={index} className="border-2 transition-colors hover:border-accent">
-                <CardHeader>
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                    <feature.icon className="h-6 w-6 text-accent" />
+              <Card key={index} className="group relative border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:shadow-xl hover:-translate-y-1">
+                <CardHeader className="pb-4">
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 ring-1 ring-accent/20 transition-all duration-300 group-hover:ring-accent/40 group-hover:scale-110">
+                    <feature.icon className="h-8 w-8 text-accent" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg font-semibold leading-tight">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">{feature.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
