@@ -47,7 +47,7 @@ const Home = () => {
               Tu aliado en seguridad industrial
             </h1>
             <p className="mb-8 text-lg text-white/90 sm:text-xl drop-shadow-md">
-              Soluciones integrales para la industria. Calidad, seguridad y servicio profesional.
+              Equipamos a tu empresa con los mejores productos industriales y de protección personal
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 touch-target shadow-lg">
