@@ -22,7 +22,7 @@ const Header = () => {
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
           <img 
-            src="/src/assets/logo.png" 
+            src={logoImg} 
             alt="Distribuidora SIS" 
             className="h-10 w-auto"
           />
