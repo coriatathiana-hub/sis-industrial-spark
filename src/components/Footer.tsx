@@ -49,19 +49,21 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Polanco, Ciudad de México
+                  Av. Jaime Balmes No. 11, Mezanine 33, Oficina 122<br />
+                  Polanco I Sección, Miguel Hidalgo, CDMX
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  [Teléfono]
+                  Tel: 55 5162 7054<br />
+                  Cel: 55 3901 5860
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  [Email]
+                  info@distribuidorasis.com.mx
                 </span>
               </li>
             </ul>
