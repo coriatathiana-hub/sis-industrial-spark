@@ -25,7 +25,7 @@ const Header = () => {
             alt="Distribuidora SIS" 
             className="h-10 w-auto"
           />
-          <span className="hidden font-bold text-foreground sm:inline-block">
+          <span className="hidden font-title font-bold text-foreground sm:inline-block tracking-wide">
             Distribuidora SIS
           </span>
         </NavLink>
