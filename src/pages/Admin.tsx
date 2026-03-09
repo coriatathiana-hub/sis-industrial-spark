@@ -63,22 +63,19 @@ const Admin = () => {
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_products") || "[]").length}
+                {PRODUCTS.length}
               </div>
               <div className="text-sm text-muted-foreground">Productos</div>
             </div>
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_categories") || "[]").length}
+                {Object.keys(CATEGORIES).length}
               </div>
               <div className="text-sm text-muted-foreground">Categorías</div>
             </div>
             <div className="rounded-lg border bg-card p-4">
               <div className="text-2xl font-bold text-primary">
-                {JSON.parse(localStorage.getItem("admin_products") || "[]").reduce(
-                  (sum: number, p: { images: string[] }) => sum + p.images.length, 
-                  0
-                )}
+                {PRODUCTS.filter(p => p.image).length}
               </div>
               <div className="text-sm text-muted-foreground">Imágenes Total</div>
             </div>
