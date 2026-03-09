@@ -66,7 +66,7 @@ const Producto = () => {
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Left column: Gallery */}
         <div>
-          <ProductGallery productName={product.name} />
+          <ProductGallery productName={product.name} imageUrl={product.image} />
         </div>
 
         {/* Right column: Product info */}
