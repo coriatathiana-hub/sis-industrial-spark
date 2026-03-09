@@ -44,7 +44,7 @@ const Home = () => {
         <div className="container relative z-10 flex items-center min-h-[520px] sm:min-h-[600px] px-4 py-16">
           <div className="max-w-2xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-lg">
-              Equipamos a tu empresa con los mejores productos industriales y de protección personal
+              Tu aliado en seguridad industrial
             </h1>
             <p className="mb-8 text-lg text-white/90 sm:text-xl drop-shadow-md">
               Soluciones integrales para la industria. Calidad, seguridad y servicio profesional.
