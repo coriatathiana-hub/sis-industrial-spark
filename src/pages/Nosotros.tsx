@@ -196,24 +196,24 @@ const Nosotros = () => {
           <CardContent>
             <ul className="grid gap-3 sm:grid-cols-2">
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Abastecimiento continuo en obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Abastecimiento continuo en obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Suministro bajo programa de obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Suministro bajo programa de obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Entrega directa a obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Entrega directa a obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Atención personalizada a residentes y jefes de obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Atención personalizada a residentes y jefes de obra</span>
               </li>
               <li className="flex items-start gap-2 sm:col-span-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Compras especiales y materiales bajo especificación</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Compras especiales y materiales bajo especificación</span>
               </li>
             </ul>
           </CardContent>
