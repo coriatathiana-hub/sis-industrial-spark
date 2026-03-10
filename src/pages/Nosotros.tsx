@@ -186,7 +186,7 @@ const Nosotros = () => {
 
       {/* Servicios Personalizados */}
       <section>
-        <Card className="border-primary bg-primary/10">
+        <Card className="overflow-hidden border-0 bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground">
           <CardHeader>
             <CardTitle className="text-2xl">Servicios Personalizados</CardTitle>
             <CardDescription className="text-base">
