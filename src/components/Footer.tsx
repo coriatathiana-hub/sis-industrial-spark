@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm text-primary-foreground/80">
-              Equipamos a tu empresa con los mejores productos industriales y de protección personal.
+              Tu aliado en seguridad industrial
             </p>
           </div>
 
