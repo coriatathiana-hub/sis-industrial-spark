@@ -1,4 +1,4 @@
-import { HardHat, Boxes, Truck, ShieldCheck } from "lucide-react";
+import { HardHat, Boxes, Truck, ShieldCheck, Package, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
@@ -61,28 +61,35 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Servicios Personalizados */}
       <section className="py-16 sm:py-24">
         <div className="container px-4">
-          <div className="mb-16 text-center max-w-3xl mx-auto">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Soluciones integrales para la industria. Calidad, seguridad y servicio profesional
+              Servicios Personalizados
             </h2>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
-              Experiencia en seguridad industrial y equipamiento a la medida de tus requerimientos, con entregas en tiempo y forma
+              Adaptamos nuestro servicio a las necesidades específicas de tu proyecto
             </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
-              <Card key={index} className="group relative border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:shadow-xl hover:-translate-y-1">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: Truck, title: "Abastecimiento continuo en obra", description: "Suministro constante de materiales para mantener tu obra en movimiento sin interrupciones" },
+              { icon: ClipboardCheck, title: "Suministro bajo programa de obra", description: "Entregas planificadas según el calendario de tu proyecto para optimizar tiempos y costos" },
+              { icon: Package, title: "Entrega directa a obra", description: "Logística eficiente con entrega en el punto exacto donde lo necesitas" },
+              { icon: HardHat, title: "Atención a residentes y jefes de obra", description: "Asesoría personalizada para responsables de proyecto con soluciones a la medida" },
+              { icon: Boxes, title: "Compras especiales", description: "Materiales bajo especificación técnica para requerimientos únicos de tu proyecto" },
+              { icon: ShieldCheck, title: "Garantía profesional", description: "Respaldo técnico y productos de fabricantes reconocidos en la industria" },
+            ].map((service, index) => (
+              <Card key={index} className="group border-border/50 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader className="pb-4">
-                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 ring-1 ring-accent/20 transition-all duration-300 group-hover:ring-accent/40 group-hover:scale-110">
-                    <feature.icon className="h-8 w-8 text-accent" strokeWidth={1.5} />
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-muted ring-1 ring-border transition-all duration-300 group-hover:ring-accent/40">
+                    <service.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="text-lg font-semibold leading-tight">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg font-semibold leading-tight">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">{feature.description}</CardDescription>
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">{service.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}

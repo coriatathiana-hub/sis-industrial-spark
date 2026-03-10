@@ -56,39 +56,28 @@ const Nosotros = () => {
 
   return (
     <div className="container px-4 py-12">
-      {/* Hero Section */}
-      <div className="mb-16 rounded-xl border border-border bg-primary p-12 text-center text-primary-foreground">
-        <h1 className="mb-6 font-title text-4xl font-bold md:text-5xl">
-          Distribuidora SIS
-        </h1>
-        <p className="mx-auto max-w-3xl text-xl opacity-90">
-          Suministros Industriales y de Seguridad
-        </p>
-      </div>
-
-      {/* Quiénes Somos - Asymmetric Layout */}
+      {/* Quiénes Somos */}
       <section className="mb-16">
-        <div className="grid gap-8 md:grid-cols-5">
-          {/* Left column - accent block */}
-          <div className="flex flex-col justify-center rounded-lg bg-primary p-8 text-primary-foreground md:col-span-2">
-            <h2 className="mb-4 text-3xl font-bold">Quiénes Somos</h2>
-            <div className="h-1 w-16 rounded bg-accent" />
-            <p className="mt-4 text-sm opacity-80">
-              Experiencia sólida en equipamiento y seguridad industrial, con la flexibilidad de adaptarnos a los requerimientos específicos de cada cliente, en tiempo y forma.
+        <h1 className="mb-2 text-3xl font-bold text-foreground md:text-4xl">Quiénes Somos</h1>
+        <div className="mb-6 h-1 w-16 rounded bg-accent" />
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Somos una comercializadora especializada en el suministro de materiales, 
+              equipos e insumos para la industria de la construcción, atendiendo obras 
+              civiles, industriales y desarrollos inmobiliarios.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
+              <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
+              de adaptación</strong> a las necesidades de obra.
             </p>
           </div>
-          {/* Right column - content */}
-          <Card className="border-0 shadow-none md:col-span-3">
-            <CardContent className="flex flex-col justify-center p-6 md:p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Somos una comercializadora especializada en el suministro de materiales, 
-                equipos e insumos para la industria de la construcción, atendiendo obras 
-                civiles, industriales y desarrollos inmobiliarios.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
-                <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
-                de adaptación</strong> a las necesidades de obra.
+          <Card className="border-border bg-muted">
+            <CardContent className="flex flex-col justify-center p-6">
+              <p className="text-base italic leading-relaxed text-muted-foreground">
+                Experiencia sólida en equipamiento y seguridad industrial, con la flexibilidad 
+                de adaptarnos a los requerimientos específicos de cada cliente, en tiempo y forma.
               </p>
             </CardContent>
           </Card>
@@ -184,41 +173,6 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Servicios Personalizados */}
-      <section>
-        <Card className="overflow-hidden border-border bg-primary text-primary-foreground">
-          <CardHeader>
-            <CardTitle className="text-2xl text-primary-foreground">Servicios Personalizados</CardTitle>
-            <CardDescription className="text-base text-primary-foreground/80">
-              Adaptamos nuestro servicio a las necesidades específicas de tu proyecto
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90">Abastecimiento continuo en obra</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90">Suministro bajo programa de obra</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90">Entrega directa a obra</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90">Atención personalizada a residentes y jefes de obra</span>
-              </li>
-              <li className="flex items-start gap-2 sm:col-span-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90">Compras especiales y materiales bajo especificación</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </section>
     </div>
   );
 };
