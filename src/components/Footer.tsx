@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/src/assets/logo.png" 
+                src="/logo.png" 
                 alt="Distribuidora SIS" 
                 className="h-10 w-auto brightness-0 invert"
               />
