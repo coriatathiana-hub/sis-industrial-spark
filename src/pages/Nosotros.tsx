@@ -188,8 +188,8 @@ const Nosotros = () => {
       <section>
         <Card className="overflow-hidden border-0 bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground">
           <CardHeader>
-            <CardTitle className="text-2xl">Servicios Personalizados</CardTitle>
-            <CardDescription className="text-base">
+            <CardTitle className="text-2xl text-primary-foreground">Servicios Personalizados</CardTitle>
+            <CardDescription className="text-base text-primary-foreground/80">
               Adaptamos nuestro servicio a las necesidades específicas de tu proyecto
             </CardDescription>
           </CardHeader>
