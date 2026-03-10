@@ -69,7 +69,7 @@ const Home = () => {
               Soluciones integrales para la industria. Calidad, seguridad y servicio profesional
             </h2>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
-              Más de una década equipando empresas con soluciones integrales de seguridad y suministros especializados
+              Experiencia en seguridad industrial y equipamiento a la medida de tus requerimientos, con entregas en tiempo y forma
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

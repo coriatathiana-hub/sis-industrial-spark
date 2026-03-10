@@ -74,7 +74,7 @@ const Nosotros = () => {
             <h2 className="mb-4 text-3xl font-bold">Quiénes Somos</h2>
             <div className="h-1 w-16 rounded bg-accent" />
             <p className="mt-4 text-sm opacity-80">
-              Más de una década equipando a la industria de la construcción con los mejores suministros.
+              Experiencia sólida en equipamiento y seguridad industrial, con la flexibilidad de adaptarnos a los requerimientos específicos de cada cliente, en tiempo y forma.
             </p>
           </div>
           {/* Right column - content */}
