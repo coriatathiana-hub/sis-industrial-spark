@@ -72,14 +72,12 @@ const Home = () => {
               Adaptamos nuestro servicio a las necesidades específicas de tu proyecto
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {[
-              { icon: Truck, title: "Abastecimiento continuo en obra", description: "Suministro constante de materiales para mantener tu obra en movimiento sin interrupciones" },
-              { icon: ClipboardCheck, title: "Suministro bajo programa de obra", description: "Entregas planificadas según el calendario de tu proyecto para optimizar tiempos y costos" },
-              { icon: Package, title: "Entrega directa a obra", description: "Logística eficiente con entrega en el punto exacto donde lo necesitas" },
-              { icon: HardHat, title: "Atención a residentes y jefes de obra", description: "Asesoría personalizada para responsables de proyecto con soluciones a la medida" },
-              { icon: Boxes, title: "Compras especiales", description: "Materiales bajo especificación técnica para requerimientos únicos de tu proyecto" },
-              { icon: ShieldCheck, title: "Garantía profesional", description: "Respaldo técnico y productos de fabricantes reconocidos en la industria" },
+              { icon: HardHat, title: "Equipos de Protección Personal", description: "Soluciones certificadas de seguridad industrial para proteger a tu equipo de trabajo" },
+              { icon: Boxes, title: "Suministros Industriales", description: "Materiales bajo especificación técnica para requerimientos únicos de tu proyecto" },
+              { icon: Truck, title: "Logística Empresarial", description: "Entrega programada y servicio de distribución confiable a nivel nacional" },
+              { icon: ShieldCheck, title: "Garantía Profesional", description: "Respaldo técnico y productos de fabricantes reconocidos en la industria" },
             ].map((service, index) => (
               <Card key={index} className="group border-border/50 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader className="pb-4">
