@@ -140,7 +140,7 @@ const Nosotros = () => {
                 className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:border-accent/40"
               >
                 <CardHeader>
-                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent">
+                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-muted transition-all duration-300 group-hover:bg-primary">
                     <Icon className="h-7 w-7 text-accent transition-colors duration-300 group-hover:text-primary-foreground" />
                   </div>
                   <CardTitle className="text-lg">{valor.title}</CardTitle>
