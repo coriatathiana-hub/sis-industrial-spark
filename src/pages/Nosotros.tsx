@@ -163,9 +163,9 @@ const Nosotros = () => {
           {lineasProducto.map((linea, index) => {
             const Icon = linea.icon;
             return (
-              <Card key={index}>
+              <Card key={index} className="border-l-4 border-l-accent/60">
                 <CardHeader>
-                  <Icon className="mb-2 h-8 w-8 text-primary" />
+                  <Icon className="mb-2 h-8 w-8 text-accent" />
                   <CardTitle className="text-xl">{linea.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
