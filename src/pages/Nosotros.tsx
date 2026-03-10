@@ -111,7 +111,7 @@ const Nosotros = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
+          <Card className="border-border bg-muted">
             <CardHeader>
               <Eye className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Visión</CardTitle>
