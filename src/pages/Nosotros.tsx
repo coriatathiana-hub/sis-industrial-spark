@@ -57,11 +57,11 @@ const Nosotros = () => {
   return (
     <div className="container px-4 py-12">
       {/* Hero Section */}
-      <div className="mb-16 text-center">
-        <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
+      <div className="mb-16 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent p-12 text-center text-primary-foreground">
+        <h1 className="mb-6 font-title text-4xl font-bold md:text-5xl">
           Distribuidora SIS
         </h1>
-        <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+        <p className="mx-auto max-w-3xl text-xl opacity-90">
           Suministros Industriales y de Seguridad
         </p>
       </div>
@@ -98,9 +98,9 @@ const Nosotros = () => {
       {/* Misión y Visión */}
       <section className="mb-16">
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-primary/20 bg-primary/5">
+          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
             <CardHeader>
-              <Target className="mb-2 h-10 w-10 text-primary" />
+              <Target className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Misión</CardTitle>
             </CardHeader>
             <CardContent>
@@ -111,9 +111,9 @@ const Nosotros = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-primary/20 bg-primary/5">
+          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
             <CardHeader>
-              <Eye className="mb-2 h-10 w-10 text-primary" />
+              <Eye className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Visión</CardTitle>
             </CardHeader>
             <CardContent>
@@ -137,11 +137,11 @@ const Nosotros = () => {
             return (
               <Card
                 key={index}
-                className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30"
+                className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:border-accent/40"
               >
                 <CardHeader>
-                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
+                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent">
+                    <Icon className="h-7 w-7 text-accent transition-colors duration-300 group-hover:text-primary-foreground" />
                   </div>
                   <CardTitle className="text-lg">{valor.title}</CardTitle>
                 </CardHeader>
@@ -163,16 +163,16 @@ const Nosotros = () => {
           {lineasProducto.map((linea, index) => {
             const Icon = linea.icon;
             return (
-              <Card key={index}>
+              <Card key={index} className="border-l-4 border-l-accent/60">
                 <CardHeader>
-                  <Icon className="mb-2 h-8 w-8 text-primary" />
+                  <Icon className="mb-2 h-8 w-8 text-accent" />
                   <CardTitle className="text-xl">{linea.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {linea.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -186,34 +186,34 @@ const Nosotros = () => {
 
       {/* Servicios Personalizados */}
       <section>
-        <Card className="border-primary bg-primary/10">
+        <Card className="overflow-hidden border-0 bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground">
           <CardHeader>
-            <CardTitle className="text-2xl">Servicios Personalizados</CardTitle>
-            <CardDescription className="text-base">
+            <CardTitle className="text-2xl text-primary-foreground">Servicios Personalizados</CardTitle>
+            <CardDescription className="text-base text-primary-foreground/80">
               Adaptamos nuestro servicio a las necesidades específicas de tu proyecto
             </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="grid gap-3 sm:grid-cols-2">
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Abastecimiento continuo en obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Abastecimiento continuo en obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Suministro bajo programa de obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Suministro bajo programa de obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Entrega directa a obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Entrega directa a obra</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Atención personalizada a residentes y jefes de obra</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Atención personalizada a residentes y jefes de obra</span>
               </li>
               <li className="flex items-start gap-2 sm:col-span-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="text-muted-foreground">Compras especiales y materiales bajo especificación</span>
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">Compras especiales y materiales bajo especificación</span>
               </li>
             </ul>
           </CardContent>
