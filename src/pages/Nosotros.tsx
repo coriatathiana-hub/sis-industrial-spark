@@ -1,13 +1,13 @@
-import { Shield, Target, Eye, Award, Package, Wrench, HardHat, Triangle } from "lucide-react";
+import { Shield, Target, Eye, Award, Package, Wrench, HardHat, Triangle, CheckCircle, Handshake } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Nosotros = () => {
   const valores = [
-    { icon: Shield, title: "Cumplimiento", description: "Entregamos en tiempo y forma según lo acordado" },
+    { icon: CheckCircle, title: "Cumplimiento", description: "Entregamos en tiempo y forma según lo acordado" },
     { icon: Shield, title: "Seguridad", description: "Priorizamos la protección en cada operación" },
     { icon: Award, title: "Calidad", description: "Productos y servicios que superan expectativas" },
-    { icon: Target, title: "Responsabilidad", description: "Comprometidos con nuestros clientes y proyectos" },
-    { icon: Eye, title: "Enfoque en Resultados", description: "Orientados a la satisfacción total del cliente" }
+    { icon: Handshake, title: "Responsabilidad", description: "Comprometidos con nuestros clientes y proyectos" },
+    { icon: Target, title: "Enfoque en Resultados", description: "Orientados a la satisfacción total del cliente" }
   ];
 
   const lineasProducto = [
@@ -66,25 +66,33 @@ const Nosotros = () => {
         </p>
       </div>
 
-      {/* Quiénes Somos */}
+      {/* Quiénes Somos - Asymmetric Layout */}
       <section className="mb-16">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl">Quiénes Somos</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Somos una comercializadora especializada en el suministro de materiales, 
-              equipos e insumos para la industria de la construcción, atendiendo obras 
-              civiles, industriales y desarrollos inmobiliarios.
+        <div className="grid gap-8 md:grid-cols-5">
+          {/* Left column - accent block */}
+          <div className="flex flex-col justify-center rounded-lg bg-primary p-8 text-primary-foreground md:col-span-2">
+            <h2 className="mb-4 text-3xl font-bold">Quiénes Somos</h2>
+            <div className="h-1 w-16 rounded bg-accent" />
+            <p className="mt-4 text-sm opacity-80">
+              Más de una década equipando a la industria de la construcción con los mejores suministros.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
-              <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
-              de adaptación</strong> a las necesidades de obra.
-            </p>
-          </CardContent>
-        </Card>
+          </div>
+          {/* Right column - content */}
+          <Card className="border-0 shadow-none md:col-span-3">
+            <CardContent className="flex flex-col justify-center p-6 md:p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Somos una comercializadora especializada en el suministro de materiales, 
+                equipos e insumos para la industria de la construcción, atendiendo obras 
+                civiles, industriales y desarrollos inmobiliarios.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
+                <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
+                de adaptación</strong> a las necesidades de obra.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       {/* Misión y Visión */}
@@ -127,9 +135,14 @@ const Nosotros = () => {
           {valores.map((valor, index) => {
             const Icon = valor.icon;
             return (
-              <Card key={index} className="text-center">
+              <Card
+                key={index}
+                className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30"
+              >
                 <CardHeader>
-                  <Icon className="mx-auto mb-2 h-8 w-8 text-primary" />
+                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Icon className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
+                  </div>
                   <CardTitle className="text-lg">{valor.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
