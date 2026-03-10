@@ -98,9 +98,9 @@ const Nosotros = () => {
       {/* Misión y Visión */}
       <section className="mb-16">
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-primary/20 bg-primary/5">
+          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
             <CardHeader>
-              <Target className="mb-2 h-10 w-10 text-primary" />
+              <Target className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Misión</CardTitle>
             </CardHeader>
             <CardContent>
@@ -111,9 +111,9 @@ const Nosotros = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-primary/20 bg-primary/5">
+          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
             <CardHeader>
-              <Eye className="mb-2 h-10 w-10 text-primary" />
+              <Eye className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Visión</CardTitle>
             </CardHeader>
             <CardContent>
