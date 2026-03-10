@@ -29,9 +29,10 @@ const Catalogo = () => {
   return (
     <div className="container px-4 py-8 md:py-12">
       <div className="mb-8">
-        <h1 className="mb-2 text-3xl md:text-4xl font-bold text-foreground">
+        <h1 className="mb-2 text-3xl font-bold text-foreground md:text-4xl">
           Catálogo de Productos
         </h1>
+        <div className="mb-4 h-1 w-16 rounded bg-accent" />
         <p className="text-muted-foreground">
           Explora nuestro inventario de equipos industriales y EPP
         </p>
