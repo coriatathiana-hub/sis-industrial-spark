@@ -57,7 +57,7 @@ const Nosotros = () => {
   return (
     <div className="container px-4 py-12">
       {/* Hero Section */}
-      <div className="mb-16 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent p-12 text-center text-primary-foreground">
+      <div className="mb-16 rounded-xl border border-border bg-primary p-12 text-center text-primary-foreground">
         <h1 className="mb-6 font-title text-4xl font-bold md:text-5xl">
           Distribuidora SIS
         </h1>
@@ -98,7 +98,7 @@ const Nosotros = () => {
       {/* Misión y Visión */}
       <section className="mb-16">
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
+          <Card className="border-border bg-muted">
             <CardHeader>
               <Target className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Misión</CardTitle>
@@ -111,7 +111,7 @@ const Nosotros = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-accent/30 bg-gradient-to-br from-primary/5 to-accent/10">
+          <Card className="border-border bg-muted">
             <CardHeader>
               <Eye className="mb-2 h-10 w-10 text-accent" />
               <CardTitle className="text-2xl">Visión</CardTitle>
@@ -140,8 +140,8 @@ const Nosotros = () => {
                 className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:border-accent/40"
               >
                 <CardHeader>
-                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent">
-                    <Icon className="h-7 w-7 text-accent transition-colors duration-300 group-hover:text-primary-foreground" />
+                  <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-muted transition-all duration-300 group-hover:bg-primary">
+                    <Icon className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
                   </div>
                   <CardTitle className="text-lg">{valor.title}</CardTitle>
                 </CardHeader>
@@ -186,7 +186,7 @@ const Nosotros = () => {
 
       {/* Servicios Personalizados */}
       <section>
-        <Card className="overflow-hidden border-0 bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground">
+        <Card className="overflow-hidden border-border bg-primary text-primary-foreground">
           <CardHeader>
             <CardTitle className="text-2xl text-primary-foreground">Servicios Personalizados</CardTitle>
             <CardDescription className="text-base text-primary-foreground/80">
