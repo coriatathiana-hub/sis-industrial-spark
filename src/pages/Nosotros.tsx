@@ -137,7 +137,7 @@ const Nosotros = () => {
             return (
               <Card
                 key={index}
-                className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30"
+                className="group text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:border-accent/40"
               >
                 <CardHeader>
                   <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
