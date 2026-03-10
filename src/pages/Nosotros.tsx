@@ -57,11 +57,11 @@ const Nosotros = () => {
   return (
     <div className="container px-4 py-12">
       {/* Hero Section */}
-      <div className="mb-16 text-center">
-        <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
+      <div className="mb-16 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent p-12 text-center text-primary-foreground">
+        <h1 className="mb-6 font-title text-4xl font-bold md:text-5xl">
           Distribuidora SIS
         </h1>
-        <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+        <p className="mx-auto max-w-3xl text-xl opacity-90">
           Suministros Industriales y de Seguridad
         </p>
       </div>
