@@ -84,12 +84,12 @@ const Contacto = () => {
     <div className="container px-4 py-12">
       {/* Header */}
       <div className="mb-12 text-center">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Contacto</p>
         <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
-          Contacto
+          ¿Listo para proteger a tu equipo?
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          Solicita una cotización o consulta sobre nuestros productos y servicios. 
-          Nuestro equipo te responderá a la brevedad.
+          Completa el formulario y te responderemos a la brevedad.
         </p>
       </div>
 
