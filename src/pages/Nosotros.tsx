@@ -1,13 +1,13 @@
-import { Shield, Target, Eye, Award, Package, Wrench, HardHat, Triangle } from "lucide-react";
+import { Shield, Target, Eye, Award, Package, Wrench, HardHat, Triangle, CheckCircle, Handshake } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Nosotros = () => {
   const valores = [
-    { icon: Shield, title: "Cumplimiento", description: "Entregamos en tiempo y forma según lo acordado" },
+    { icon: CheckCircle, title: "Cumplimiento", description: "Entregamos en tiempo y forma según lo acordado" },
     { icon: Shield, title: "Seguridad", description: "Priorizamos la protección en cada operación" },
     { icon: Award, title: "Calidad", description: "Productos y servicios que superan expectativas" },
-    { icon: Target, title: "Responsabilidad", description: "Comprometidos con nuestros clientes y proyectos" },
-    { icon: Eye, title: "Enfoque en Resultados", description: "Orientados a la satisfacción total del cliente" }
+    { icon: Handshake, title: "Responsabilidad", description: "Comprometidos con nuestros clientes y proyectos" },
+    { icon: Target, title: "Enfoque en Resultados", description: "Orientados a la satisfacción total del cliente" }
   ];
 
   const lineasProducto = [
