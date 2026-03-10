@@ -66,25 +66,33 @@ const Nosotros = () => {
         </p>
       </div>
 
-      {/* Quiénes Somos */}
+      {/* Quiénes Somos - Asymmetric Layout */}
       <section className="mb-16">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl">Quiénes Somos</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Somos una comercializadora especializada en el suministro de materiales, 
-              equipos e insumos para la industria de la construcción, atendiendo obras 
-              civiles, industriales y desarrollos inmobiliarios.
+        <div className="grid gap-8 md:grid-cols-5">
+          {/* Left column - accent block */}
+          <div className="flex flex-col justify-center rounded-lg bg-primary p-8 text-primary-foreground md:col-span-2">
+            <h2 className="mb-4 text-3xl font-bold">Quiénes Somos</h2>
+            <div className="h-1 w-16 rounded bg-accent" />
+            <p className="mt-4 text-sm opacity-80">
+              Más de una década equipando a la industria de la construcción con los mejores suministros.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
-              <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
-              de adaptación</strong> a las necesidades de obra.
-            </p>
-          </CardContent>
-        </Card>
+          </div>
+          {/* Right column - content */}
+          <Card className="border-0 shadow-none md:col-span-3">
+            <CardContent className="flex flex-col justify-center p-6 md:p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Somos una comercializadora especializada en el suministro de materiales, 
+                equipos e insumos para la industria de la construcción, atendiendo obras 
+                civiles, industriales y desarrollos inmobiliarios.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                Nos distinguimos por nuestro <strong className="text-foreground">cumplimiento</strong>, 
+                <strong className="text-foreground"> rapidez</strong> y <strong className="text-foreground">capacidad 
+                de adaptación</strong> a las necesidades de obra.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       {/* Misión y Visión */}
