@@ -10,13 +10,13 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/src/assets/logo.png" 
+                src="/logo.png" 
                 alt="Distribuidora SIS" 
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-primary-foreground/80">
-              Equipamos a tu empresa con los mejores productos industriales y de protección personal.
+              Tu aliado en seguridad industrial
             </p>
           </div>
 
